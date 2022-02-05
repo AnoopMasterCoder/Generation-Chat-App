@@ -2,7 +2,7 @@ import 'package:flutter/services.dart';
 
 class NativeCallback {
   static const MethodChannel _platform =
-      const MethodChannel('com.official.generation/nativeCallBack');
+      const MethodChannel('com.anoop.karan.generation/nativeCallBack');
 
   Future<void> callForCancelNotifications() async {
     print('Here in Notification Clear Native Calling');

@@ -42,7 +42,7 @@ class _IntroductionScreenState extends State<IntroductionScreen> {
               alignment: Alignment.center,
               padding: EdgeInsets.only(left: 20.0, right: 20.0),
               child: Text(
-                "A Private, Secure, End-to-End Encrypted Messaging app that helps you to connect with your connections without any Ads, promotion. No other third party person, organization, or even Generation Team can't read your messages.",
+                "A Private, Secure, End-to-End Encrypted Messaging app that helps you to connect with your connections without any Ads.",
                 textAlign: TextAlign.center,
                 style: TextStyle(color: Colors.white70, fontSize: 16.0),
               ),
@@ -51,7 +51,7 @@ class _IntroductionScreenState extends State<IntroductionScreen> {
               padding: EdgeInsets.all(20.0),
               child: Center(
                 child: Text(
-                  "Your Privacy our biggest priority.",
+                  "Your Privacy is Our Biggest Priority.",
                   textAlign: TextAlign.center,
                   style: TextStyle(color: Colors.amber, fontSize: 16.0),
                 ),

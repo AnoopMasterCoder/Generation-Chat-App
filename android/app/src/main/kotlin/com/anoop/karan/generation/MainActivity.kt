@@ -1,4 +1,4 @@
-package com.official.generation
+package com.anoop.karan.generation
 
 import android.app.NotificationManager
 import android.content.Context
@@ -23,7 +23,7 @@ import java.time.LocalDateTime
 
 class MainActivity : FlutterActivity() {
 
-    private val CHANNEL = "com.official.generation/nativeCallBack"
+    private val CHANNEL = "com.anoop.karan.generation/nativeCallBack"
 
     companion object{
         val TAG: String = MainActivity::class.java.simpleName
@@ -32,9 +32,6 @@ class MainActivity : FlutterActivity() {
     @RequiresApi(Build.VERSION_CODES.O)
     override fun configureFlutterEngine(@NonNull flutterEngine: FlutterEngine) {
         super.configureFlutterEngine(flutterEngine)
-
-        // for Screenshot Restriction
-        window.setFlags(WindowManager.LayoutParams.FLAG_SECURE, WindowManager.LayoutParams.FLAG_SECURE)
 
         MethodChannel(flutterEngine.dartExecutor.binaryMessenger, CHANNEL).setMethodCallHandler { call, result ->
             when (call.method) {

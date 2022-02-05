@@ -157,7 +157,7 @@ class _ApplicationListState extends State<ApplicationList> {
                   if (!await NativeCallback().callToCheckNetworkConnectivity())
                     _showDiaLog(titleText: 'No Internet Connection');
                   else {
-                    _showDiaLog(titleText: 'Wait for map');
+                    _showDiaLog(titleText: 'Wait for Map');
                     await _locationSend();
                   }
                 },
@@ -241,7 +241,7 @@ class _ApplicationListState extends State<ApplicationList> {
             );
           else {
             _showDiaLog(
-              titleText: 'Not Supporting Document Format',
+              titleText: 'Not Supported Document Format',
             );
           }
         });

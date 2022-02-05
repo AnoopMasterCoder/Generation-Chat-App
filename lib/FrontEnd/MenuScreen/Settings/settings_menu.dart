@@ -43,7 +43,7 @@ class _SettingsWindowState extends State<SettingsWindow> {
           everySettingsItem(
               mainText: 'Notification',
               icon: Icons.notification_important_outlined,
-              smallDescription: 'Different Notification Customization'),
+              smallDescription: 'Notification Customization'),
           SizedBox(
             height: 15.0,
           ),

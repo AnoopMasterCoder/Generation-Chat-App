@@ -161,7 +161,7 @@ class _LogInAuthenticationState extends State<LogInAuthentication> {
                               FirebaseAuth.instance.sendPasswordResetEmail(
                                   email: this._email.text);
                               showAlertBox(
-                                  "Email Reset Link Send",
+                                  "Email Reset Link Sent",
                                   "Check Your Email.....\nPassword Must be At Least 8 Characters",
                                   Colors.green);
                             } else

@@ -19,7 +19,7 @@ class SendNotification {
       case MediaTypes.Text:
         await sendNotification(
           token: connectionToken,
-          title: "$currAccountUserName Send You a Message",
+          title: "$currAccountUserName Sent You a Message",
           body: textMsg,
         );
         break;
@@ -27,7 +27,7 @@ class SendNotification {
       case MediaTypes.Voice:
         await sendNotification(
           token: connectionToken,
-          title: "$currAccountUserName Send You a Voice",
+          title: "$currAccountUserName Sent You a Voice",
           body: '',
         );
         break;
@@ -35,7 +35,7 @@ class SendNotification {
       case MediaTypes.Image:
         await sendNotification(
           token: connectionToken,
-          title: "$currAccountUserName Send You a Image",
+          title: "$currAccountUserName Sent You a Image",
           body: textMsg,
         );
         break;
@@ -43,7 +43,7 @@ class SendNotification {
       case MediaTypes.Video:
         await sendNotification(
           token: connectionToken,
-          title: "$currAccountUserName Send You a Video",
+          title: "$currAccountUserName Sent You a Video",
           body: textMsg,
         );
         break;
@@ -51,7 +51,7 @@ class SendNotification {
       case MediaTypes.Sticker:
         await sendNotification(
           token: connectionToken,
-          title: "$currAccountUserName Send You a Sticker",
+          title: "$currAccountUserName Sent You a Sticker",
           body: '',
         );
         break;
@@ -59,7 +59,7 @@ class SendNotification {
       case MediaTypes.Location:
         await sendNotification(
           token: connectionToken,
-          title: "$currAccountUserName Send You Device Location",
+          title: "$currAccountUserName Sent You Device Location",
           body: textMsg,
         );
         break;
@@ -67,7 +67,7 @@ class SendNotification {
       case MediaTypes.Document:
         await sendNotification(
           token: connectionToken,
-          title: "$currAccountUserName Send You a Document",
+          title: "$currAccountUserName Sent You a Document",
           body: textMsg,
         );
         break;
@@ -84,7 +84,7 @@ class SendNotification {
     try {
       print('Send');
 
-      final String _serverKey = 'SERVER-KEY';
+      final String _serverKey = 'AAAAY131ki0:APA91bHHUGqBiAyj1KxY3n44vEkB45ID-0mms36GvpRa7Mg5mnl2n9Oh1rBxdOWaie8KCYEyWWpq4uSRctyuku0bYdbBSgdQtkcK7MOJit8lKb9YXGem3niSOGAtXx0uCiarJkM_hTba';
 
       final Response response = await post(
         Uri.parse('https://fcm.googleapis.com/fcm/send'),

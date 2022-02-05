@@ -272,7 +272,7 @@ class _PhoneNumberConfigState extends State<PhoneNumberConfig> {
       padding: const EdgeInsets.only(left: 20.0, right: 20.0),
       alignment: Alignment.bottomCenter,
       child: Text(
-        'Alert: If you registered your number and if any connection will call you, your number will visible in their call Logs...',
+        'Alert: If you registered your number and if any connection calls you, your number will be visible in their call Logs...',
         textAlign: TextAlign.center,
         style: TextStyle(color: Colors.red, fontSize: 16.0),
       ),

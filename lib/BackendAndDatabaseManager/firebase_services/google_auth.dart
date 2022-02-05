@@ -66,7 +66,8 @@ class GoogleAuth {
                     'In Google Auth Delete User Old Profile from Database Error: ${e.toString()}'));
           }
 
-          await userNameChecking(context, userCredential.user!.email.toString());
+          await userNameChecking(
+              context, userCredential.user!.email.toString());
         }
       } else {
         print("Already Logged In");
@@ -121,14 +122,14 @@ class GoogleAuth {
                         style: TextStyle(color: Colors.white),
                         validator: (inputUserName) {
                           if (inputUserName!.length < 6)
-                            return "User Name At Least 6 Characters";
+                            return "User Name Should Be At Least 6 Characters";
                           else if (inputUserName.contains(' ') ||
                               inputUserName.contains('@'))
-                            return "Space and '@' Not Allowed...User '_' instead of space";
+                            return "Space and '@' Not Allowed...Use '_' instead of space";
                           else if (inputUserName.contains('__'))
-                            return "'__' Not Allowed...User '_' instead of '__'";
+                            return "'__' Not Allowed...Use '_' instead of '__'";
                           else if (!_messageRegex.hasMatch(inputUserName))
-                            return "Sorry,Only Emoji Not Supported";
+                            return "Sorry, Emoji Not Supported";
                           return null;
                         },
                         decoration: InputDecoration(
@@ -200,7 +201,7 @@ class GoogleAuth {
       /// Flutter Toast Initialization and show
       _fToast.init(context);
       showToast(
-        'Wait, We Creating Your Account',
+        'Wait, We Are Creating Your Account',
         _fToast,
         fontSize: 18.0,
         toastColor: Colors.amber,
@@ -267,7 +268,7 @@ class GoogleAuth {
         showAlertBox(
             context, "Log-In Successful", "Enjoy this app", Colors.green);
       } else {
-        showAlertBox(context, "User Name Already Exist",
+        showAlertBox(context, "User Name Already Exists",
             "Try Another User Name", Colors.amber);
       }
     } else {

@@ -389,7 +389,7 @@ class _ProfileState extends State<Profile> {
                   children: [
                     Center(
                       child: Text(
-                        'If You delete this account, your entire data will lost forever...\n\nDo You Want to Continue?',
+                        'If You delete this account, your entire data will be lost forever...\n\nDo You Want to Continue?',
                         textAlign: TextAlign.center,
                         style: TextStyle(
                           color: Colors.white,

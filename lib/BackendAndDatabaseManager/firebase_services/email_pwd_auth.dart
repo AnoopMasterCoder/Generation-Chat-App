@@ -53,7 +53,7 @@ class EmailAndPasswordAuth {
 
       showAlertBox(
           "Sign-Up Successful",
-          "A Verification Link Sent to Your Registered Mail....\n\nPlease Verify Your Mail then Log-In",
+          "A Verification Link Has Been Sent to Your Registered Mail....\n\nPlease Verify Your Mail then Log-In",
           Colors.green);
     } catch (e) {
       print("Sign-up Error is: $e");
@@ -67,7 +67,7 @@ class EmailAndPasswordAuth {
       else
         showAlertBox(
           "Sign-Up Error",
-          "Undefine Error Occur... \n\nMake sure your phone Connected to the Internet",
+          "Undefine Error Occured... \n\nMake sure your phone is Connected to the Internet",
           Colors.redAccent,
         );
     }
@@ -102,14 +102,14 @@ class EmailAndPasswordAuth {
         FirebaseAuth.instance.signOut();
         showAlertBox(
           "Log-In Error",
-          "Email Not Verified...\n\nA Verification Link Sent to Your Registered Mail.\n\nPlease Verify Your Email then Log in",
+          "Email Not Verified...\n\nA Verification Link Has Been Sent to Your Registered Mail.\n\nPlease Verify Your Email then Log in",
           Colors.redAccent,
         );
       }
     } catch (e) {
       print("Log-in Error: $e");
       showAlertBox(
-          "Log-in Error", "Email or Password not Match", Colors.redAccent);
+          "Log-in Error", "Email or Password doesn't Match", Colors.redAccent);
     }
   }
 
@@ -140,14 +140,14 @@ class EmailAndPasswordAuth {
                         style: TextStyle(color: Colors.white),
                         validator: (inputUserName) {
                           if (inputUserName!.length < 6)
-                            return "User Name At Least 6 Characters";
+                            return "User Name Should Be At Least 6 Characters";
                           else if (inputUserName.contains(' ') ||
                               inputUserName.contains('@'))
-                            return "Space and '@' Not Allowed...User '_' instead of space";
+                            return "Space and '@' Not Allowed...Use '_' instead of space";
                           else if (inputUserName.contains('__'))
-                            return "'__' Not Allowed...User '_' instead of '__'";
+                            return "'__' Not Allowed...Use '_' instead of '__'";
                           else if (!_messageRegex.hasMatch(inputUserName))
-                            return "Sorry,Only Emoji Not Supported";
+                            return "Sorry, Emoji Not Supported";
                           return null;
                         },
                         decoration: InputDecoration(
@@ -216,7 +216,7 @@ class EmailAndPasswordAuth {
       /// Flutter Toast Initialization and show
       _fToast.init(context);
       showToast(
-        'Wait, We Creating Your Account',
+        'Wait, We Are Creating Your Account',
         _fToast,
         fontSize: 18.0,
         toastColor: Colors.amber,
@@ -284,7 +284,7 @@ class EmailAndPasswordAuth {
         showAlertBox("Log-In Successful", "Enjoy this app", Colors.green);
       } else {
         showAlertBox(
-            "User Name Already Exist", "Try Another User Name", Colors.amber);
+            "User Name Already Exists", "Try Another User Name", Colors.amber);
       }
     } else {
       print("Not Validate");

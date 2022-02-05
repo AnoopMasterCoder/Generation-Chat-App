@@ -971,7 +971,7 @@ class _ChatScreenSetUpState extends State<ChatScreenSetUp>
         await _makeDirectoryOnce();
       } else
         _showDiaLog(
-            titleText: 'Sorry, Microphone Permission Already Denied',
+            titleText: 'Sorry, Microphone Permission Denied',
             contentText:
                 'Please go to the phone settings and\nGo to the Apps -> Generation ->\nPermission -> Allow Microphone to access this app');
     } catch (e) {
